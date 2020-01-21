@@ -80,3 +80,101 @@ li.dev-item #FAE:hover {
   background-color: #6931ca;
   border-radius: 50%;
 }
+
+li.dev-itemb #FAEC {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: red;
+}
+
+li.dev-itemb #FAEO {
+  position: absolute;
+  top: 13px;
+  right: 40px;
+  color: green;
+}
+
+li.dev-itemb #FAEC:hover {
+  color: #FFF;
+  background-color: red;
+  border-radius: 40%;
+}
+
+li.dev-itemb #FAEO:hover {
+  color: #FFF;
+  background-color: green;
+  border-radius: 40%;
+}
+
+/* edit */
+
+li.dev-itemb {
+  background: #FFF;
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+}
+
+li.dev-itemb form header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+li.dev-itemb header img{
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+}
+
+li.dev-itemb form header .user-info {
+  margin-left: 10px;
+}
+
+div.user-infob strong{
+  display: block;
+  font-size: 16px;
+  color: #373;
+  position: absolute;
+  top: 30px;
+  left: 85px;
+}
+
+input.techs {
+  width: 75%;
+  height: 32px;
+  font-size: #666;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  position: absolute;
+  top: 50px;
+  left: 85px;
+}
+
+div.input-group {
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+div.input-group .input-block {
+  margin-top: 0;
+}
+
+div.input-block label {
+  color: #ACACAC;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+}
+
+div.input-block input {
+  width: 100%;
+  height: 32px;
+  font-size: #666;
+  border: 0;
+  border-bottom: 1px solid #eee;
+}

@@ -32,8 +32,18 @@ function App() {
 
   async function handleDelDev(dev) {
 
-    console.log(dev)
-    const response = await api.delete(`/devs/${dev._id}`, dev);
+    // eslint-disable-next-line no-unused-vars
+    const del = await api.delete(`/devs/${dev._id}`, dev);
+
+    const response = await api.get('/devs');
+
+      setDevs(response.data);
+  }
+
+  async function handleEditDev(dev, data) {
+
+    console.log(dev, data)
+    const response = await api.put(`/devs/${dev._id}`, data);
     console.log(response)
 
     const responsee = await api.get('/devs');
@@ -51,7 +61,7 @@ function App() {
       <main>
         <ul>
           {devs.map(dev =>(
-            <DevItem key={dev._id} dev = {dev} onDel={handleDelDev}/>
+            <DevItem key={dev._id} dev = {dev} onDel={handleDelDev} onEdit={handleEditDev}/>
           ))}
         </ul>
       </main>

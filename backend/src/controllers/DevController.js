@@ -6,14 +6,14 @@ const { findConnections, sendMessage } = require('../websocket')
 module.exports = {
 
   async update(request, response) {
-    const { github_username, techs, latitude, longitude } = request.body
+    const { github_username, techs, latitude, longitude } = request.body;
+    const { id } = request.params;
+    const _id = id;
+    console.log(request)
 
-    let dev = await Dev.findOne({ github_username });
+    let dev = await Dev.findOne({ _id });
     
     if(dev){
-      const apiResponse = await axios.get(`https://api.github.com/users/${github_username}`);
-    
-      const { name = login, avatar_url, bio } = apiResponse.data;
     
       const techsArray = parseStringAsArray(techs);
     
@@ -22,10 +22,7 @@ module.exports = {
         coordinates: [longitude, latitude],
       };
     
-      const dev = await Dev.updateOne({github_username},{
-        name,
-        avatar_url,
-        bio,
+      dev = await Dev.updateOne({_id},{
         techs: techsArray,
         location,
       });
