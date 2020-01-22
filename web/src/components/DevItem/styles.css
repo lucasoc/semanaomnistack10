@@ -81,6 +81,8 @@ li.dev-item #FAE:hover {
   border-radius: 50%;
 }
 
+/*//////////////////////////// edit ////////////////////////////////*/
+
 li.dev-itemb #FAEC {
   position: absolute;
   top: 15px;
@@ -107,7 +109,6 @@ li.dev-itemb #FAEO:hover {
   border-radius: 40%;
 }
 
-/* edit */
 
 li.dev-itemb {
   background: #FFF;
@@ -136,7 +137,7 @@ li.dev-itemb form header .user-info {
 div.user-infob strong{
   display: block;
   font-size: 16px;
-  color: #373;
+  color: #333;
   position: absolute;
   top: 30px;
   left: 85px;
